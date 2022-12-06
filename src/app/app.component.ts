@@ -8,21 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'assignment-three';
   display = false;
-  buttonClicks = [1];
-  value = 0;
+  buttonClicks = [];
+
   setDisplay() {
-    if (this.display) {
-      this.display = false;
-    } else {
-      this.display = true;
-    }
- 
-    this.buttonClicks.push(this.value);
+    if (this.display) { this.display = false; } else { this.display = true; }
+    // this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.buttonClicks.push(new Date());
   }
 
-  getColor(){
-   return this.value >=5?'blue':'white';
-  }
 
 
 }
